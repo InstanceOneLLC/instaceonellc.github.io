@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instance One | Custom Software Solutions</title>
+    <title>Instance One | Secure Intelligence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -11,11 +11,11 @@
     <style>
         :root {
             /* The "Expensive" Palette */
-            --bg-color: #050505;       /* True Black/Deep Void */
+            --bg-color: #050505;       /* True Black */
             --surface: #111111;        /* Subtle contrast */
-            --text-primary: #e0e0e0;   /* Soft White (never pure white) */
+            --text-primary: #e0e0e0;   /* Soft White */
             --text-secondary: #888888; /* Muted Grey */
-            --accent: #ffffff;         /* Stark White for impact */
+            --accent: #ffffff;         /* Stark White */
             --border: #222222;         /* Very subtle borders */
         }
 
@@ -28,10 +28,9 @@
             margin: 0; 
             padding: 0; 
             background-color: var(--bg-color);
-            -webkit-font-smoothing: antialiased; /* Crisp text on Mac */
+            -webkit-font-smoothing: antialiased; 
         }
 
-        /* Typography Utilities */
         h1, h2, h3 { font-weight: 400; margin: 0; color: var(--accent); }
         p { color: var(--text-secondary); }
         .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--text-secondary); text-transform: uppercase; }
@@ -40,10 +39,10 @@
             max-width: 1000px; 
             margin: 0 auto; 
             padding: 0 40px; 
-            position: relative; /* For layout alignment */
+            position: relative; 
         }
 
-        /* Header: Minimal & Technical */
+        /* Header */
         header { 
             padding: 40px 0; 
             border-bottom: 1px solid var(--border); 
@@ -58,7 +57,7 @@
             letter-spacing: -1px;
         }
 
-        /* Hero: Massive, Silent, Impactful */
+        /* Hero: The Hybrid Security/Algo Angle */
         .hero { 
             padding: 160px 0 120px 0; 
         }
@@ -67,17 +66,17 @@
             line-height: 1.1; 
             letter-spacing: -0.02em; 
             margin-bottom: 30px; 
-            background: linear-gradient(to right, #fff, #666);
+            background: linear-gradient(to right, #fff, #888);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .hero p { 
             font-size: 1.25rem; 
-            max-width: 550px; 
+            max-width: 600px; 
             font-weight: 300;
         }
         
-        /* The "Link" Button (No ugly rectangles) */
+        /* Button */
         .btn-link {
             display: inline-block;
             margin-top: 40px;
@@ -94,7 +93,7 @@
             opacity: 0.8;
         }
 
-        /* Services: The "Grid" Look */
+        /* Services Grid */
         .services { 
             padding: 100px 0; 
             border-top: 1px solid var(--border);
@@ -103,18 +102,15 @@
             margin-bottom: 60px; 
             display: block; 
         }
-        
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 60px; 
         }
-        
         .card { 
-            background: transparent; /* No boxy background */
-            padding: 0; /* Remove internal padding */
+            background: transparent; 
+            padding: 0; 
             border: none; 
-            box-shadow: none;
         }
         .card h3 { 
             font-size: 1.1rem; 
@@ -126,7 +122,7 @@
             line-height: 1.7;
         }
 
-        /* Footer: Legal & Precise */
+        /* Footer */
         footer { 
             padding: 80px 0 40px 0; 
             border-top: 1px solid var(--border); 
@@ -146,7 +142,6 @@
         
         .copyright { margin-top: 60px; opacity: 0.4; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
 
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
             .hero h2 { font-size: 2.2rem; }
             .container { padding: 0 20px; }
@@ -160,30 +155,34 @@
     <div class="container">
         <header>
             <div class="logo">INSTANCE_ONE</div>
-            <div class="mono">Custom Software Solutions</div>
+            <div class="mono">Secure Intelligence</div>
         </header>
 
         <section class="hero">
-            <h2>Silent infrastructure<br>for complex data.</h2>
-            <p>Providing custom backend architecture, computational logic, and systems integration for private entities.</p>
+            <h2>Defensive structure<br>& predictive logic.</h2>
+            <p>A specialized consultancy focused on security auditing, algorithmic modeling, and automated decision engines.</p>
             <a href="mailto:info@instanceonellc.com" class="btn-link">INITIALIZE CONTACT &rarr;</a>
         </section>
 
         <section class="services">
-            <span class="mono section-label">Capabilities 01 — 03</span>
+            <span class="mono section-label">Capabilities</span>
             <div class="grid">
+                
                 <div class="card">
-                    <h3>01 / Custom Development</h3>
-                    <p>Design and deployment of bespoke software applications tailored to specific business logic and high-throughput operational requirements.</p>
+                    <h3>01 / Security Architecture</h3>
+                    <p>Advanced vulnerability assessment, penetration diagnostics, and infrastructure hardening for mission-critical systems.</p>
                 </div>
+
                 <div class="card">
-                    <h3>02 / Systems Integration</h3>
-                    <p>Connecting disparate software subsystems to ensure seamless data flow, API stability, and automated process management.</p>
+                    <h3>02 / Quantitative Modeling</h3>
+                    <p>Development of high-frequency predictive models, machine learning pipelines, and automated execution logic.</p>
                 </div>
+
                 <div class="card">
-                    <h3>03 / Data Architecture</h3>
-                    <p>Structured database management, algorithmic optimization, and secure data handling protocols for enterprise environments.</p>
+                    <h3>03 / Systems Engineering</h3>
+                    <p>Full-stack development of custom software solutions, backend API integration, and cloud-native architecture.</p>
                 </div>
+                
             </div>
         </section>
 
@@ -191,6 +190,7 @@
             <div class="footer-content">
                 <div class="footer-col">
                     <strong>Instance One, LLC</strong>
+                    Jupiter, Florida
                 </div>
                 <div class="footer-col">
                     <strong>Inquiries</strong>
