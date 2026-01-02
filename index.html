@@ -3,87 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instance One, LLC | Custom Software Solutions</title>
+    <title>Instance One | Institutional Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --primary: #2c3e50; /* Professional Navy */
-            --accent: #3498db;  /* Trustworthy Blue */
-            --text: #333;
-            --bg: #f4f7f6;
+            /* The "Expensive" Palette */
+            --bg-color: #050505;       /* True Black/Deep Void */
+            --surface: #111111;        /* Subtle contrast */
+            --text-primary: #e0e0e0;   /* Soft White (never pure white) */
+            --text-secondary: #888888; /* Muted Grey */
+            --accent: #ffffff;         /* Stark White for impact */
+            --border: #222222;         /* Very subtle borders */
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); margin: 0; padding: 0; background-color: var(--bg); }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+        * { box-sizing: border-box; }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.8; 
+            color: var(--text-primary); 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased; /* Crisp text on Mac */
+        }
+
+        /* Typography Utilities */
+        h1, h2, h3 { font-weight: 400; margin: 0; color: var(--accent); }
+        p { color: var(--text-secondary); }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; color: var(--text-secondary); text-transform: uppercase; }
+
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 0 40px; 
+            position: relative; /* For layout alignment */
+        }
+
+        /* Header: Minimal & Technical */
+        header { 
+            padding: 40px 0; 
+            border-bottom: 1px solid var(--border); 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { 
+            font-family: 'JetBrains Mono', monospace; 
+            font-weight: 400; 
+            color: var(--accent); 
+            letter-spacing: -1px;
+        }
+
+        /* Hero: Massive, Silent, Impactful */
+        .hero { 
+            padding: 160px 0 120px 0; 
+        }
+        .hero h2 { 
+            font-size: 3.5rem; 
+            line-height: 1.1; 
+            letter-spacing: -0.02em; 
+            margin-bottom: 30px; 
+            background: linear-gradient(to right, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p { 
+            font-size: 1.25rem; 
+            max-width: 550px; 
+            font-weight: 300;
+        }
         
-        /* Header */
-        header { background: #fff; padding: 20px 0; border-bottom: 1px solid #ddd; }
-        .header-content { display: flex; justify-content: space-between; align-items: center; }
-        h1 { margin: 0; font-size: 1.5rem; color: var(--primary); text-transform: uppercase; letter-spacing: 1px; }
+        /* The "Link" Button (No ugly rectangles) */
+        .btn-link {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid var(--text-secondary);
+            padding-bottom: 5px;
+            transition: all 0.3s ease;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+        .btn-link:hover {
+            border-bottom: 1px solid var(--accent);
+            opacity: 0.8;
+        }
+
+        /* Services: The "Grid" Look */
+        .services { 
+            padding: 100px 0; 
+            border-top: 1px solid var(--border);
+        }
+        .section-label { 
+            margin-bottom: 60px; 
+            display: block; 
+        }
         
-        /* Hero Section */
-        .hero { text-align: center; padding: 80px 20px; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .hero h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto; }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 60px; 
+        }
         
-        /* Services Grid */
-        .services { padding: 40px 0; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 30px; border-radius: 8px; border-left: 4px solid var(--accent); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .card h3 { margin-top: 0; color: var(--primary); }
+        .card { 
+            background: transparent; /* No boxy background */
+            padding: 0; /* Remove internal padding */
+            border: none; 
+            box-shadow: none;
+        }
+        .card h3 { 
+            font-size: 1.1rem; 
+            margin-bottom: 15px; 
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .card p { 
+            font-size: 0.95rem; 
+            line-height: 1.7;
+        }
+
+        /* Footer: Legal & Precise */
+        footer { 
+            padding: 80px 0 40px 0; 
+            border-top: 1px solid var(--border); 
+            font-size: 0.85rem; 
+            color: var(--text-secondary);
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-col strong { color: var(--accent); display: block; margin-bottom: 10px; font-weight: 400; }
+        .footer-col a { color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
+        .footer-col a:hover { color: var(--accent); }
         
-        /* Footer */
-        footer { text-align: center; padding: 40px 0; margin-top: 40px; font-size: 0.9rem; color: #777; border-top: 1px solid #ddd; }
-        .contact-info { margin-bottom: 20px; }
-        
-        /* Button */
-        .btn { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; margin-top: 20px; }
-        .btn:hover { background: var(--accent); }
+        .copyright { margin-top: 60px; opacity: 0.4; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.2rem; }
+            .container { padding: 0 20px; }
+            .grid { gap: 40px; }
+            .footer-content { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container header-content">
-            <h1>Instance One, LLC</h1>
-        </div>
-    </header>
-
     <div class="container">
+        <header>
+            <div class="logo">INSTANCE_ONE</div>
+            <div class="mono">Systems Architecture</div>
+        </header>
+
         <section class="hero">
-            <h2>Enterprise Software Solutions</h2>
-            <p>Providing custom computer programming, systems integration, and backend architecture for business clients.</p>
-            <a href="mailto:info@instanceonellc.com" class="btn">Contact Us</a>
+            <h2>Silent infrastructure<br>for complex data.</h2>
+            <p>Providing custom backend architecture, computational logic, and systems integration for private entities.</p>
+            <a href="mailto:info@instanceonellc.com" class="btn-link">INITIALIZE CONTACT &rarr;</a>
         </section>
 
         <section class="services">
+            <span class="mono section-label">Capabilities 01 — 03</span>
             <div class="grid">
                 <div class="card">
-                    <h3>Custom Development</h3>
-                    <p>Design and deployment of bespoke software applications tailored to specific business logic and operational requirements.</p>
+                    <h3>01 / Custom Development</h3>
+                    <p>Design and deployment of bespoke software applications tailored to specific business logic and high-throughput operational requirements.</p>
                 </div>
                 <div class="card">
-                    <h3>Systems Integration</h3>
-                    <p>Connecting disparate software subsystems to ensure seamless data flow and process automation.</p>
+                    <h3>02 / Systems Integration</h3>
+                    <p>Connecting disparate software subsystems to ensure seamless data flow, API stability, and automated process management.</p>
                 </div>
                 <div class="card">
-                    <h3>Data Architecture</h3>
-                    <p>Structured database management, optimization, and secure data handling protocols for enterprise environments.</p>
+                    <h3>03 / Data Architecture</h3>
+                    <p>Structured database management, algorithmic optimization, and secure data handling protocols for enterprise environments.</p>
                 </div>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <strong>Instance One, LLC</strong><br>
-                18060 Crown Quay Ln<br>
-                Jupiter, FL 33458<br>
-                <br>
-                Email: info@instanceonellc.com
+        <footer>
+            <div class="footer-content">
+                <div class="footer-col">
+                    <strong>Instance One, LLC</strong>
+                    18060 Crown Quay Ln<br>
+                    Jupiter, FL 33458
+                </div>
+                <div class="footer-col">
+                    <strong>Inquiries</strong>
+                    <a href="mailto:info@instanceonellc.com">info@instanceonellc.com</a>
+                </div>
             </div>
-            <p>&copy; 2026 Instance One, LLC. All Rights Reserved.</p>
-        </div>
-    </footer>
+            <div class="copyright">
+                &copy; 2026 INSTANCE ONE, LLC. ALL RIGHTS RESERVED.
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
